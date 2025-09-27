@@ -19,12 +19,11 @@ public class Escola {
     public void listarPessoas() {
         System.out.printf("[%s]\n", nomeEscola);
 
-        for (Pessoa p : listaPessoas) {
             if (listaPessoas.isEmpty()) {
                 System.out.println("Não há pessoas cadastradas ainda.");
             } else {
-                System.out.println(p.exibirDetalhes());
-
+                for (Pessoa p : listaPessoas) {
+                    System.out.println(p.exibirDetalhes());
             }
         }
     }
